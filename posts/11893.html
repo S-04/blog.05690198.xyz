@@ -3,7 +3,7 @@
 
 <head>
   
-  <title>标签：python - 柒</title>
+  <title>添加动态背景（线条） - 柒</title>
   <meta charset="UTF-8">
   <meta name="description" content="生如夏花之灿烂，死如秋叶之静美。">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -11,13 +11,15 @@
   
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/png" />
-  <meta name="description" content="生如夏花之灿烂，死如秋叶之静美。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="柒">
-<meta property="og:url" content="https:&#x2F;&#x2F;s-04.github.io&#x2F;tags&#x2F;python&#x2F;index.html">
+  <meta name="description" content="hexo主题添加线条">
+<meta name="keywords" content="hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="添加动态背景（线条）">
+<meta property="og:url" content="https:&#x2F;&#x2F;s-04.github.io&#x2F;posts&#x2F;11893.html">
 <meta property="og:site_name" content="柒">
-<meta property="og:description" content="生如夏花之灿烂，死如秋叶之静美。">
+<meta property="og:description" content="hexo主题添加线条">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-14T00:09:47.640Z">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
@@ -26,7 +28,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1573733406205">
+  <link rel="stylesheet" href="/css/style.css?v=1573733406155">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -122,35 +124,67 @@
   </div>
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
-        <section class="nexmoe-posts" id="brand-waterfall">
-    
-    <div class="nexmoe-post">
-        <a href="/posts/51872.html">
-            <div class="nexmoe-post-cover mdui-ripple"> 
-                
-                    <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg" alt="python">
-                
-                <h1>python</h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2019年07月09日</a>
-            <a><i class="nexmoefont icon-areachart"></i>2.4k 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 10 分钟</a>
-            
-            
-                <a class="nexmoefont icon-tag-fill -link" href="/tags/python/" rel="tag">python</a>
-            
-        </div>
-        <article>
-            
-            <p>python基础教程</p>
-            
-        </article>
+        <div class="nexmoe-post">
+    <div class="nexmoe-post-cover"> 
+        
+        <img src="https://raw.githubusercontent.com/S-04/Figurebed/master//img/Konachan.com - 293684 aqua_eyes ass blue_hair brown_eyes brown_hair cameltoe camera doggirl glasses group loli orange_eyes original panties phone tail underwear upskirt.jpg">
+        
+        <h1>添加动态背景（线条）</h1>
     </div>
+  <div class="nexmoe-post-meta">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年05月28日</a>
+    <a><i class="nexmoefont icon-areachart"></i>331 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
     
-</section>
+    
+      <a class="nexmoefont icon-tag-fill -link" href="/tags/hexo/" rel="tag">hexo</a>
+    
+  </div>
+  <article>
+    <p>hexo主题添加线条</p>
+<a id="more"></a>
+<p>   添加动态背景<br>修改_layout.swig<br>打开 next/layout/_layout.swig<br>在 &lt; /body&gt;之前添加代码(注意不要放在&lt; /head&gt;的后面)</p>
+<p><code>&lt;script type=&quot;text/javascript&quot; src=&quot;//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js&quot;&gt;&lt;/script&gt;</code></p>
+<p>   修改配置文件<br>打开 /next/_config.yml,在里面添加如下代码：(可以放在最后面)</p>
+<p> canvas_nest: true<br>到此就结束了，运行 hexo clean，然后运行 hexo g,然后运行 hexo s，最后打开浏览器在浏览器的地址栏输入 localhost:4000 就能看到效果了\（￣︶￣）/</p>
+<p>如果你感觉默认的线条太多的话<br>可以这么设置====&gt;<br>在上一步修改 _layout.swig中，把刚才的这些代码：</p>
+<p><code>&lt;script type=&quot;text/javascript&quot; src=&quot;//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js&quot;&gt;&lt;/script&gt;</code></p>
+<p>  改为</p>
+<p><code>&lt;script type=&quot;text/javascript&quot;
+    color=&quot;0,0,255&quot; opacity=&#39;0.7&#39; zIndex=&quot;-2&quot; count=&quot;99&quot; src=&quot;//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js&quot;&gt;&lt;/script&gt;</code></p>
+<p>配置项说明：<br>color ：线条颜色, 默认: ‘0,0,0’；三个数字分别为(R,G,B)<br>opacity: 线条透明度（0~1）, 默认: 0.5<br>count: 线条的总数量, 默认: 150<br>zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认: -1</p>
 
+  </article>
+  
+    
+<div class="nexmoe-post-copyright">
+<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+<strong>本文作者：</strong>柒<br>
+<strong>本文链接：</strong><a href="https://s-04.github.io/posts/11893.html" title="https:&#x2F;&#x2F;s-04.github.io&#x2F;posts&#x2F;11893.html" target="_blank" rel="noopener">https:&#x2F;&#x2F;s-04.github.io&#x2F;posts&#x2F;11893.html</a><br>
+
+  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+</div>
+
+
+  
+  <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        id: window.location.pathname,
+        repo: 'S-04.github.io',
+        owner: 'S-04',
+        admin: 'S-04'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+</div>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
@@ -166,7 +200,7 @@
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1573733406209"></script>
+<script src="/js/app.js?v=1573733406162"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
