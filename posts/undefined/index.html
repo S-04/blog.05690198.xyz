@@ -3,7 +3,7 @@
 
 <head>
   
-  <title>hexo命令 - 柒</title>
+  <title>添加动态背景（线条） - 柒</title>
   <meta charset="UTF-8">
   <meta name="description" content="生如夏花之灿烂，死如秋叶之静美。">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -11,15 +11,15 @@
   
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/png" />
-  <meta name="description" content="hexo">
+  <meta name="description" content="hexo主题添加线条">
 <meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo命令">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;05&#x2F;30&#x2F;hexo%E5%91%BD%E4%BB%A4&#x2F;index.html">
+<meta property="og:title" content="添加动态背景（线条）">
+<meta property="og:url" content="https:&#x2F;&#x2F;s-04.github.io&#x2F;posts&#x2F;undefined&#x2F;index.html">
 <meta property="og:site_name" content="柒">
-<meta property="og:description" content="hexo">
+<meta property="og:description" content="hexo主题添加线条">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-12T15:43:41.283Z">
+<meta property="og:updated_time" content="2019-11-13T13:20:23.700Z">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
@@ -28,7 +28,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1573605642920">
+  <link rel="stylesheet" href="/css/style.css?v=1573690170738">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -117,23 +117,23 @@
 </aside>
     <div class="nexmoe-copyright">
         &copy; 2019 柒
-        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
+         <a href='' target="_blank"></a>
+         <a href='' target="_blank"></a>
     </div>
-</div><!-- .nexmoe-drawer -->
+</div><!-- .nexmoe-drawer -->                      
   </div>
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
         <div class="nexmoe-post">
     <div class="nexmoe-post-cover"> 
         
-            <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg">
+        <img src="https://raw.githubusercontent.com/S-04/Figurebed/master//img/Konachan.com - 293684 aqua_eyes ass blue_hair brown_eyes brown_hair cameltoe camera doggirl glasses group loli orange_eyes original panties phone tail underwear upskirt.jpg">
         
-        <h1>hexo命令</h1>
+        <h1>添加动态背景（线条）</h1>
     </div>
   <div class="nexmoe-post-meta">
-    <a><i class="nexmoefont icon-calendar-fill"></i>2019年05月30日</a>
-    <a><i class="nexmoefont icon-areachart"></i>145 字</a>
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年05月28日</a>
+    <a><i class="nexmoefont icon-areachart"></i>331 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
     
     
@@ -141,52 +141,18 @@
     
   </div>
   <article>
-    <p> hexo</p>
+    <p>hexo主题添加线条</p>
 <a id="more"></a>
-<h3 id="hexo-基本使用命令"><a href="#hexo-基本使用命令" class="headerlink" title="hexo 基本使用命令"></a>hexo 基本使用命令</h3><hr>
-<ul>
-<li>hexo new page “所创建的分类”  例如分类（categories）标签（tags）</li>
-</ul>
-<hr>
-<ul>
-<li>hexo n “我的博文”  新建文章</li>
-</ul>
-<hr>
-<ul>
-<li>hexo generate 也可简写成 hexo g  生成</li>
-</ul>
-<hr>
-<ul>
-<li>hexo server 也可简写成 hexo s  启动服务预览（监视文件变动并自动更新，无需重启服务器）</li>
-</ul>
-<hr>
-<ul>
-<li>hexo deploy 也可简写成 hexo d  部署</li>
-</ul>
-<hr>
-<ul>
-<li>hexo server -s  静态模式</li>
-</ul>
-<hr>
-<ul>
-<li>hexo server -p 5000  修改端口</li>
-</ul>
-<hr>
-<ul>
-<li>hexo server -i 192.168.1.1  自定义IP</li>
-</ul>
-<hr>
-<ul>
-<li>hexo clean  清除缓存</li>
-</ul>
-<hr>
-<ul>
-<li>hexo d   部署 到远程仓库</li>
-</ul>
-<hr>
-<ul>
-<li>hexo clean –&gt;hexo generate –&gt;hexo deploy   重新部署更新</li>
-</ul>
+<p>   添加动态背景<br>修改_layout.swig<br>打开 next/layout/_layout.swig<br>在 &lt; /body&gt;之前添加代码(注意不要放在&lt; /head&gt;的后面)</p>
+<p><code>&lt;script type=&quot;text/javascript&quot; src=&quot;//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js&quot;&gt;&lt;/script&gt;</code></p>
+<p>   修改配置文件<br>打开 /next/_config.yml,在里面添加如下代码：(可以放在最后面)</p>
+<p> canvas_nest: true<br>到此就结束了，运行 hexo clean，然后运行 hexo g,然后运行 hexo s，最后打开浏览器在浏览器的地址栏输入 localhost:4000 就能看到效果了\（￣︶￣）/</p>
+<p>如果你感觉默认的线条太多的话<br>可以这么设置====&gt;<br>在上一步修改 _layout.swig中，把刚才的这些代码：</p>
+<p><code>&lt;script type=&quot;text/javascript&quot; src=&quot;//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js&quot;&gt;&lt;/script&gt;</code></p>
+<p>  改为</p>
+<p><code>&lt;script type=&quot;text/javascript&quot;
+    color=&quot;0,0,255&quot; opacity=&#39;0.7&#39; zIndex=&quot;-2&quot; count=&quot;99&quot; src=&quot;//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js&quot;&gt;&lt;/script&gt;</code></p>
+<p>配置项说明：<br>color ：线条颜色, 默认: ‘0,0,0’；三个数字分别为(R,G,B)<br>opacity: 线条透明度（0~1）, 默认: 0.5<br>count: 线条的总数量, 默认: 150<br>zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认: -1</p>
 
   </article>
   
@@ -194,7 +160,7 @@
 <div class="nexmoe-post-copyright">
 <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
 <strong>本文作者：</strong>柒<br>
-<strong>本文链接：</strong><a href="http://yoursite.com/2019/05/30/hexo%E5%91%BD%E4%BB%A4/" title="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;05&#x2F;30&#x2F;hexo%E5%91%BD%E4%BB%A4&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;05&#x2F;30&#x2F;hexo%E5%91%BD%E4%BB%A4&#x2F;</a><br>
+<strong>本文链接：</strong><a href="https://s-04.github.io/posts/undefined/" title="https:&#x2F;&#x2F;s-04.github.io&#x2F;posts&#x2F;undefined&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;s-04.github.io&#x2F;posts&#x2F;undefined&#x2F;</a><br>
 
   <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
 
@@ -234,7 +200,7 @@
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1573605642927"></script>
+<script src="/js/app.js?v=1573690170742"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
