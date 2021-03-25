@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <title>接口工具 Jmeter+postman的基本使用 - 柒</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="生如夏花之灿烂，死如秋叶之静美。">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/png" />
+  <meta name="description" content="介绍下Jmeter+postman的使用， 这两种工具在接口测试上面基本是必不可避免需要使用的工具。">
+<meta name="keywords" content="Jmeter">
+<meta property="og:type" content="article">
+<meta property="og:title" content="接口工具 Jmeter+postman的基本使用">
+<meta property="og:url" content="https:&#x2F;&#x2F;s-04.github.io&#x2F;posts&#x2F;38263.html">
+<meta property="og:site_name" content="柒">
+<meta property="og:description" content="介绍下Jmeter+postman的使用， 这两种工具在接口测试上面基本是必不可避免需要使用的工具。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps1.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps2.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps3.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps4.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps5.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps6.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps7.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps8.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps9.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps10.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps11.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps12.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps13.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps14.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps15.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps16.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps17.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps18.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps19.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps20.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps21.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps22.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps23.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps25.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps25.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps26.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps27.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps28.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps29.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps30.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps31.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps32.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps33.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps34.jpg">
+<meta property="og:updated_time" content="2021-03-25T03:21:10.001Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;gitee.com&#x2F;S-04&#x2F;Figurebed&#x2F;raw&#x2F;master&#x2F;img&#x2F;wps1.jpg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
+  <link rel="stylesheet" href="/css/style.css?v=1616642480284">
+  <!-- 《页面点击小红心 -->
+  
+    <script type="text/javascript" src="/js/love.js"></script>
+  
+  <!-- 页面点击小红心》 -->
+  
+</head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://gitee.com/S-04/Figurebed/raw/master/img/timg.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" target="_blank" rel="noopener" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="柒" class="mdui-btn mdui-btn-icon"><img src="/images/avatar.png"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="柒">
+            <img src="/images/avatar.png" alt="柒">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>13</div>
+        <div><span>标签</span>8</div>
+        <div><span>分类</span>0</div>
+    </div>
+    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </ul>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">社交按钮</h3>
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/7610547" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a>
+    </div>
+</div>
+  
+  
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">标签云</h3>
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud">
+      <a href="/tags/Jmeter/" style="font-size: 10px;">Jmeter</a> <a href="/tags/cpe/" style="font-size: 10px;">cpe</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/sql/" style="font-size: 10px;">sql</a> <a href="/tags/%E5%8A%A8%E6%BC%AB/" style="font-size: 10px;">动漫</a> <a href="/tags/%E6%89%8B%E6%9C%BA/" style="font-size: 15px;">手机</a>
+    </div>
+    
+  </div>
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">十一月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">六月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2021 柒
+         <a href='' target="_blank"></a>
+         <a href='' target="_blank"></a>
+    </div>
+</div><!-- .nexmoe-drawer -->                      
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    <div class="nexmoe-post-cover"> 
+        
+            <img src="https://gitee.com/S-04/Figurebed/raw/master/img/timg.jpg">
+        
+        <h1>接口工具 Jmeter+postman的基本使用</h1>
+    </div>
+  <div class="nexmoe-post-meta">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年09月08日</a>
+    <a><i class="nexmoefont icon-areachart"></i>2.4k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 9 分钟</a>
+    
+    
+      <a class="nexmoefont icon-tag-fill -link" href="/tags/Jmeter/" rel="tag">Jmeter</a>
+    
+  </div>
+  <article>
+    <p> 介绍下Jmeter+postman的使用， 这两种工具在接口测试上面基本是必不可避免需要使用的工具。</p>
+<a id="more"></a>
+
+<h2 id="1-jmeter的安装"><a href="#1-jmeter的安装" class="headerlink" title="1.jmeter的安装"></a><strong>1.jmeter的安装</strong></h2><p>Jmeter为开源软件，由bat文件调用jar包的执行，所以jmeter无需安装，但是运行电脑需要32位的jdk环境（jdk安装目录为C:\Program Files (x86)\Java\jdk1.8.0_144）</p>
+<p>将jmeter解压到磁盘根目录下，切换到bin目录中，双击jmeter.bat即可启动</p>
+<p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps1.jpg" alt="img"> </p>
+<p>如果jmeter的启动过程中发生错误，一般是由于jdk环境变量配置存在问题，需要检查jdk环境变量的的配置</p>
+<h2 id="2-jmeter的主界面"><a href="#2-jmeter的主界面" class="headerlink" title="2.jmeter的主界面"></a><strong>2.jmeter的主界面</strong></h2><p>双击jmeter.bat启动jmeter后，可以进入到jmeter的主页面，可以在option中选择主页面的外观以及语言</p>
+<p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps2.jpg" alt="img"> </p>
+<h3 id="2-1选择jmeter的外观"><a href="#2-1选择jmeter的外观" class="headerlink" title="2.1选择jmeter的外观"></a><strong>2.1选择jmeter的外观</strong></h3><p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps3.jpg" alt="img"> </p>
+<h3 id="2-2选择jmeter的语言"><a href="#2-2选择jmeter的语言" class="headerlink" title="2.2选择jmeter的语言"></a><strong>2.2选择jmeter的语言</strong></h3><p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps4.jpg" alt="img"> </p>
+<h2 id="3-使用jmeter-添加接口请求"><a href="#3-使用jmeter-添加接口请求" class="headerlink" title="3.使用jmeter 添加接口请求"></a><strong>3.使用jmeter 添加接口请求</strong></h2><h3 id="3-1在添加接口请求之前需要先添加线程组，用来管理所有接口请求，一般一个功能模块为一个线程组"><a href="#3-1在添加接口请求之前需要先添加线程组，用来管理所有接口请求，一般一个功能模块为一个线程组" class="headerlink" title="3.1在添加接口请求之前需要先添加线程组，用来管理所有接口请求，一般一个功能模块为一个线程组"></a><strong>3.1在添加接口请求之前需要先添加线程组，用来管理所有接口请求，一般一个功能模块为一个线程组</strong></h3><p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps5.jpg" alt="img"> </p>
+<h3 id="3-2-添加好线程组后，右键点击线程组添加取样器中的HTTP请求，HTTP请求中可以配置接口的访问信息"><a href="#3-2-添加好线程组后，右键点击线程组添加取样器中的HTTP请求，HTTP请求中可以配置接口的访问信息" class="headerlink" title="3.2 添加好线程组后，右键点击线程组添加取样器中的HTTP请求，HTTP请求中可以配置接口的访问信息"></a><strong>3.2 添加好线程组后，右键点击线程组添加取样器中的HTTP请求，HTTP请求中可以配置接口的访问信息</strong></h3><p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps6.jpg" alt="img"> </p>
+<h3 id="3-3在HTTP请求中配置接口的访问信息"><a href="#3-3在HTTP请求中配置接口的访问信息" class="headerlink" title="3.3在HTTP请求中配置接口的访问信息"></a><strong>3.3在HTTP请求中配置接口的访问信息</strong></h3><p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps7.jpg" alt="img"> </p>
+<h3 id="3-4配置好接口的访问参数后，可以点击jmeter中的运行按钮，在运行之前需要先保存脚本，根据提示设置脚本保存的目录"><a href="#3-4配置好接口的访问参数后，可以点击jmeter中的运行按钮，在运行之前需要先保存脚本，根据提示设置脚本保存的目录" class="headerlink" title="3.4配置好接口的访问参数后，可以点击jmeter中的运行按钮，在运行之前需要先保存脚本，根据提示设置脚本保存的目录"></a><strong>3.4配置好接口的访问参数后，可以点击jmeter中的运行按钮，在运行之前需要先保存脚本，根据提示设置脚本保存的目录</strong></h3><p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps8.jpg" alt="img"> </p>
+<h3 id="3-5保存完脚本后，发现无法查看接口运行的情况，需要在线程组中添加监听器中的察看结果树"><a href="#3-5保存完脚本后，发现无法查看接口运行的情况，需要在线程组中添加监听器中的察看结果树" class="headerlink" title="3.5保存完脚本后，发现无法查看接口运行的情况，需要在线程组中添加监听器中的察看结果树"></a><strong>3.5保存完脚本后，发现无法查看接口运行的情况，需要在线程组中添加监听器中的察看结果树</strong></h3><p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps9.jpg" alt="img"> </p>
+<h3 id="3-6在查看结果数中，可以查看接口返回数据的情况，点击查看结果数中接口的名称，可以查看单条接口的请求，响应数据等信息"><a href="#3-6在查看结果数中，可以查看接口返回数据的情况，点击查看结果数中接口的名称，可以查看单条接口的请求，响应数据等信息" class="headerlink" title="3.6在查看结果数中，可以查看接口返回数据的情况，点击查看结果数中接口的名称，可以查看单条接口的请求，响应数据等信息"></a><strong>3.6在查看结果数中，可以查看接口返回数据的情况，点击查看结果数中接口的名称，可以查看单条接口的请求，响应数据等信息</strong></h3><p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps10.jpg" alt="img"> </p>
+<h3 id="3-7也可以在选项页面，设置响应数据的格式为Json格式"><a href="#3-7也可以在选项页面，设置响应数据的格式为Json格式" class="headerlink" title="3.7也可以在选项页面，设置响应数据的格式为Json格式"></a><strong>3.7也可以在选项页面，设置响应数据的格式为Json格式</strong></h3><p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps11.jpg" alt="img"> </p>
+<h3 id="3-8-定位察看结果树中的报错情况"><a href="#3-8-定位察看结果树中的报错情况" class="headerlink" title="3.8 定位察看结果树中的报错情况"></a><strong>3.8 定位察看结果树中的报错情况</strong></h3><p>如果是绿色状态，代表jmeter与接口服务器通信正常，错误原因应该为参数值设置错误，如果是红色报错，则证明jmeter与接口服务器之间通信异常，应为接口连接的问题</p>
+<p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps12.jpg" alt="img"> </p>
+<h2 id="4-添加HTTP请求默认值"><a href="#4-添加HTTP请求默认值" class="headerlink" title="4.添加HTTP请求默认值"></a><strong>4.添加HTTP请求默认值</strong></h2><p>HTTP请求默认值的作用在于可以统一管理项目地址，例如接口连接中重复的服务器IP，重复提交的参数等，可以在HTTP请求默认值中做相关配置，这样一来可以在切换接口服务器IP时，在jmeter脚本中也可以快速修改</p>
+<h3 id="4-1在线程组中添加HTTP请求默认值"><a href="#4-1在线程组中添加HTTP请求默认值" class="headerlink" title="4.1在线程组中添加HTTP请求默认值"></a><strong>4.1在线程组中添加HTTP请求默认值</strong></h3><p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps13.jpg" alt="img"> </p>
+<h3 id="4-2配置HTTP请求默认值"><a href="#4-2配置HTTP请求默认值" class="headerlink" title="4.2配置HTTP请求默认值"></a><strong>4.2配置HTTP请求默认值</strong></h3><p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps14.jpg" alt="img"> </p>
+<h2 id="5-添加响应断言"><a href="#5-添加响应断言" class="headerlink" title="5.添加响应断言"></a><strong>5.添加响应断言</strong></h2><p>响应断言的作用在于可以自动判断接口返回数据是否符合预期，通过对比接口返回数据中的固定字符串，实现判断的目的</p>
+<h3 id="5-1添加响应断言"><a href="#5-1添加响应断言" class="headerlink" title="5.1添加响应断言"></a><strong>5.1添加响应断言</strong></h3><p>由于响应断言是判断接口返回的数据，所以需要添加到接口中而不是线程组中</p>
+<p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps15.jpg" alt="img"> </p>
+<h3 id="5-2-配置响应断言内容"><a href="#5-2-配置响应断言内容" class="headerlink" title="5.2 配置响应断言内容"></a><strong>5.2 配置响应断言内容</strong></h3><p>在响应断言面板中配置响应断言相关的信息</p>
+<p>要测试的字段：由于断言用来判断接口返回数据，所以判断的主体为响应文本</p>
+<p>模式匹配规则：“包括”的意思为接口响应数据中包括预期的字段</p>
+<p>​             “匹配”与“equals”的意思都是接口响应数据与预期字段相等</p>
+<p>​             “Substring”的意思为子字符串</p>
+<p>​             “否”代表在选择的条件上加否，比如选择包括+否，意思为不包括</p>
+<p>要测试的模式：预期字段</p>
+<p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps16.jpg" alt="img"> </p>
+<h3 id="5-3-响应断言判断的效果"><a href="#5-3-响应断言判断的效果" class="headerlink" title="5.3 响应断言判断的效果"></a><strong>5.3 响应断言判断的效果</strong></h3><p>当接口返回数据与响应断言中的不一致时，响应断言会作出相应提示</p>
+<p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps17.jpg" alt="img"> </p>
+<h2 id="6-参数化"><a href="#6-参数化" class="headerlink" title="6.参数化"></a><strong>6.参数化</strong></h2><h3 id="6-1添加参数化配置文件"><a href="#6-1添加参数化配置文件" class="headerlink" title="6.1添加参数化配置文件"></a><strong>6.1添加参数化配置文件</strong></h3><p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps18.jpg" alt="img"> </p>
+<h3 id="6-2-配置参数化"><a href="#6-2-配置参数化" class="headerlink" title="6.2 配置参数化"></a><strong>6.2 配置参数化</strong></h3><p>配置参数名：参数名为参数文件的调用形式，在接口链接中通过参数名调用参数文件</p>
+<p>选择参数文件：参数文件为文本类型，可以使用notpad++编辑，避免出现编码错误</p>
+<p>选择编码格式：默认选择utf-8格式</p>
+<p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps19.jpg" alt="img"> </p>
+<h3 id="6-3在接口链接中调用参数"><a href="#6-3在接口链接中调用参数" class="headerlink" title="6.3在接口链接中调用参数"></a><strong>6.3在接口链接中调用参数</strong></h3><p>Jmeter中的参数格式默认为 ${参数名}的形式</p>
+<p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps20.jpg" alt="img"> </p>
+<h3 id="6-4-配置多个参数"><a href="#6-4-配置多个参数" class="headerlink" title="6.4 配置多个参数"></a><strong>6.4 配置多个参数</strong></h3><p>Jmeter支持在同一个文件中配置多个参数的方式</p>
+<p>参数文件配置：参数文件中需要以逗号为分隔符</p>
+<p>Jmeter参数配置：在变量名称中配置对应的参数名，多个参数名之间要以英文逗号为分隔符</p>
+<p>参数的顺序为读取数据的顺序，例如变量名中配置的顺序为username,password 则username取参数文件中的第一列，password读取参数文件中的第二列</p>
+<p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps21.jpg" alt="img"> </p>
+<h2 id="7-添加正则表达式提取器"><a href="#7-添加正则表达式提取器" class="headerlink" title="7.添加正则表达式提取器"></a><strong>7.添加正则表达式提取器</strong></h2><h3 id="7-1正则表达式提取器的作用"><a href="#7-1正则表达式提取器的作用" class="headerlink" title="7.1正则表达式提取器的作用"></a><strong>7.1正则表达式提取器的作用</strong></h3><p>在接口的访问中，经常会出现动态验证的情况，例如物业接口中，登录接口返回数据中存在token参数，并且token参数会实时变化，并且其他接口在访问时需要使用动态变化的token值</p>
+<p>在访问其他接口时，需要从登陆接口中获取到最新的token数据，所以需要调用正则表达式提取器</p>
+<p>注：token为接口中的一种用户验证方式，通过动态变化提升接口的安全性</p>
+<h3 id="7-2正则表达式提取器的原理"><a href="#7-2正则表达式提取器的原理" class="headerlink" title="7.2正则表达式提取器的原理"></a><strong>7.2正则表达式提取器的原理</strong></h3><p>正则表达式提取器是利用正则表达式从接口返回数据中提取指定字符串，并将其保存在参数中，并提供给其他接口调用，正则表达式是一种模糊查询方式，可以使用固定组合匹配出任意字符</p>
+<h3 id="7-3-添加正则表达式提取器"><a href="#7-3-添加正则表达式提取器" class="headerlink" title="7.3 添加正则表达式提取器"></a><strong>7.3 添加正则表达式提取器</strong></h3><p>正则表达式是作用在接口的返回数据中，所以要添加到接口链接中</p>
+<p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps22.jpg" alt="img"> </p>
+<h3 id="7-4-配置正则表达式提取器"><a href="#7-4-配置正则表达式提取器" class="headerlink" title="7.4 配置正则表达式提取器"></a><strong>7.4 配置正则表达式提取器</strong></h3><p>1.要检查的响应字段：主体为接口的响应数据 body以及信息头代表的是接口的其他部分，由于要提取的内容大部分在接口响应数据中，所以这里默认选择主体</p>
+<p>2.引用名称：类似于参数文件中的参数名</p>
+<p>3.正则表达式：通过表达式可以提取出指定字符，表达式一般为接口数据中字段与符号的组合</p>
+<p>4.模板：默认写为$1$</p>
+<p>5.匹配数字：当正则表达式可以匹配出多个值时，1 代表匹配结果中的第一个 0代表随机选择</p>
+<p>6.缺省值：当正则表达式无法找到值时，会选择一个默认值</p>
+<p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps23.jpg" alt="img"> </p>
+<h3 id="7-5使用正则表达式中的参数"><a href="#7-5使用正则表达式中的参数" class="headerlink" title="7.5使用正则表达式中的参数"></a><strong>7.5使用正则表达式中的参数</strong></h3><p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps25.jpg" alt="img"> </p>
+<h2 id="8-接口性能测试"><a href="#8-接口性能测试" class="headerlink" title="8.接口性能测试"></a><strong>8.接口性能测试</strong></h2><h3 id="8-1-配置接口并发场景"><a href="#8-1-配置接口并发场景" class="headerlink" title="8.1 配置接口并发场景"></a><strong>8.1 配置接口并发场景</strong></h3><p>线程数：相当于lr中的并发用户数，此处意思为，共有200个线程并发执行线程组中的HTTP请求</p>
+<p>Ramp-Up：线程数在一定时间内增加到最大值，图中意思为在1s内增加200个用户，相当于设置用户递增的方式</p>
+<p>循环次数：虚拟用户循环访问接口的次数，选择永远，线程组将会无限循环</p>
+<p>调度器：线程组的执行方式，会调用配置好的持续时间</p>
+<p>持续时间：脚本持续运行的时长，通常与循环次数中的“永远”搭配使用，可以实现让脚本持续运行</p>
+<p>启动延迟：设置脚本延迟执行的时间，可以实现定时执行</p>
+<p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps25.jpg" alt="img"> </p>
+<p>举例：当前接口的性能需求为满足200个用户并发访问并且响应时间需要小于300ms</p>
+<p>设计场景：1.设定线程数为200，持续时间5min，查看测试结束后接口响应时间的情况，如果接口响应时间远远大于300ms，则需要逐步减少设置的线程数，查看响应时间在300ms时对应的线程数</p>
+<p>2.设定线程数为200，持续时间5min，查看测试结束后接口响应时间的情况，如果接口响应时间小于300ms，则需要逐步增加设置的线程数，查看响应时间在300ms时对应的线程数</p>
+<p>3.综上：测试结果中应该用一组数据提现接口响应时间随用户数的变化，需要有目标并发用户数对应的响应时间，也需要提现目标响应时间对应的并发用户数</p>
+<p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps26.jpg" alt="img"> </p>
+<h3 id="8-2-聚合报告"><a href="#8-2-聚合报告" class="headerlink" title="8.2 聚合报告"></a><strong>8.2 聚合报告</strong></h3><p>聚合报告中可以查看接口响应时间的情况，以及接口脚本执行过程中的错误率等情况，聚合报告中的时间单位为毫秒</p>
+<p>表示的内容为每个接口请求正常处理后所消耗的时间</p>
+<p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps27.jpg" alt="img"> </p>
+<p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps28.jpg" alt="img"> </p>
+<p>每秒点击量以及每秒事务数：</p>
+<p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps29.jpg" alt="img"> </p>
+<p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps30.jpg" alt="img"> </p>
+<p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps31.jpg" alt="img"> </p>
+<h2 id="9-监控服务器性能"><a href="#9-监控服务器性能" class="headerlink" title="9.监控服务器性能"></a><strong>9.监控服务器性能</strong></h2><p>在执行性能测试的过程中可以监控服务器的硬件资源使用情况，可以选择spotlight监控，也可以选择使用jmeter自身监控，参考课件中的《使用jmeter监控服务器资源.doc》</p>
+<p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps32.jpg" alt="img"> </p>
+<p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps33.jpg" alt="img"> </p>
+<p><img src="https://gitee.com/S-04/Figurebed/raw/master/img/wps34.jpg" alt="img"> </p>
+
+  </article>
+  
+    
+<div class="nexmoe-post-copyright">
+<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+<strong>本文作者：</strong>柒<br>
+<strong>本文链接：</strong><a href="https://s-04.github.io/posts/38263.html" title="https:&#x2F;&#x2F;s-04.github.io&#x2F;posts&#x2F;38263.html" target="_blank" rel="noopener">https:&#x2F;&#x2F;s-04.github.io&#x2F;posts&#x2F;38263.html</a><br>
+
+  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+</div>
+
+
+  
+  <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '9345a34df46c36c1c647',
+        clientSecret: 'c48859b3a20e7a78d28d54eefb676fcf8e81af00',
+        id: window.location.pathname,
+        repo: 'S-04.github.io',
+        owner: 'S-04',
+        admin: 'S-04'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+ 
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-for-websites@1.4.9/SmoothScroll.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="/js/app.js?v=1616642480296"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+
+
+
+  
+
+
+
+
+
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  <!-- 雪花特效2 -->
+  
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/T_33.model.json"},"display":{"position":"right","width":300,"height":700},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>
