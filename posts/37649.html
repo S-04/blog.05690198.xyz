@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <title>Markdown 基本教程 - 柒</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="生如夏花之灿烂，死如秋叶之静美。">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/png" />
+  <meta name="description" content="Markdown格式书写博客">
+<meta name="keywords" content="markdown">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown 基本教程">
+<meta property="og:url" content="https:&#x2F;&#x2F;s-04.github.io&#x2F;posts&#x2F;37649.html">
+<meta property="og:site_name" content="柒">
+<meta property="og:description" content="Markdown格式书写博客">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;2&#x2F;16&#x2F;168f4f17755344a8?w=100&amp;h=100&amp;f=jpeg&amp;s=2170">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;2&#x2F;16&#x2F;168f4f17755344a8?w=100&amp;h=100&amp;f=jpeg&amp;s=2170">
+<meta property="og:updated_time" content="2022-06-11T19:12:14.258Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;2&#x2F;16&#x2F;168f4f17755344a8?w=100&amp;h=100&amp;f=jpeg&amp;s=2170">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
+  <link rel="stylesheet" href="/css/style.css?v=1654978716890">
+  <!-- 《页面点击小红心 -->
+  
+    <script type="text/javascript" src="/js/love.js"></script>
+  
+  <!-- 页面点击小红心》 -->
+  
+</head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/S-04/Figurebed/img/timg.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" target="_blank" rel="noopener" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="柒" class="mdui-btn mdui-btn-icon"><img src="/images/avatar.png"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="柒">
+            <img src="/images/avatar.png" alt="柒">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>13</div>
+        <div><span>标签</span>8</div>
+        <div><span>分类</span>0</div>
+    </div>
+    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </ul>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">社交按钮</h3>
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/7610547" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a>
+    </div>
+</div>
+  
+  
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">标签云</h3>
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud">
+      <a href="/tags/Jmeter/" style="font-size: 10px;">Jmeter</a> <a href="/tags/cpe/" style="font-size: 10px;">cpe</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/sql/" style="font-size: 10px;">sql</a> <a href="/tags/%E5%8A%A8%E6%BC%AB/" style="font-size: 10px;">动漫</a> <a href="/tags/%E6%89%8B%E6%9C%BA/" style="font-size: 15px;">手机</a>
+    </div>
+    
+  </div>
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">十一月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">六月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2022 柒
+         <a href='' target="_blank"></a>
+         <a href='' target="_blank"></a>
+    </div>
+</div><!-- .nexmoe-drawer -->                      
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    <div class="nexmoe-post-cover"> 
+        
+            <img src="https://cdn.jsdelivr.net/gh/S-04/Figurebed/img/timg.jpg">
+        
+        <h1>Markdown 基本教程</h1>
+    </div>
+  <div class="nexmoe-post-meta">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年05月31日</a>
+    <a><i class="nexmoefont icon-areachart"></i>1.3k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 5 分钟</a>
+    
+    
+      <a class="nexmoefont icon-tag-fill -link" href="/tags/markdown/" rel="tag">markdown</a>
+    
+  </div>
+  <article>
+    <p>Markdown格式书写博客</p>
+<a id="more"></a> 
+
+<ul>
+<li>标题</li>
+</ul>
+<hr>
+<p>Markdown标题语法非常简单，只要在文本前面加#号即可，如下：<br># 标题1<br>## 标题2<br>### 标题3<br>#### 标题4<br>##### 标题5</p>
+<p>复制代码效果如下：</p>
+<h1 id="标题1"><a href="#标题1" class="headerlink" title="标题1"></a>标题1</h1><h2 id="标题2"><a href="#标题2" class="headerlink" title="标题2"></a>标题2</h2><h3 id="标题3"><a href="#标题3" class="headerlink" title="标题3"></a>标题3</h3><h4 id="标题4"><a href="#标题4" class="headerlink" title="标题4"></a>标题4</h4><h5 id="标题5"><a href="#标题5" class="headerlink" title="标题5"></a>标题5</h5><ul>
+<li>引述</li>
+</ul>
+<hr>
+<p>在Markdown中使用引述，只需在引用文本前加“&gt;”就行了：</p>
+<p>&gt; 这是一个引述<br>&gt; &gt; 嵌套引述</p>
+<p>复制代码效果：</p>
+<blockquote>
+<p>这是一个引述</p>
+<blockquote>
+<p>嵌套引述</p>
+</blockquote>
+</blockquote>
+<hr>
+<ul>
+<li>字体格式</li>
+</ul>
+<hr>
+<p>Markdown中，使用_文本_的格式来斜体文本，使用<strong>文本</strong>的格式来加粗文本，具体如下(注: _都可以使用*来代替 , 就看你的个人喜好了):  </p>
+<p>*斜体*<br>**加粗**<br>___斜体加粗___</p>
+<p>复制代码:</p>
+<p><em>斜体</em></p>
+<p><strong>加粗</strong></p>
+<p><strong><em>斜体加粗</em></strong></p>
+<ul>
+<li>列表</li>
+</ul>
+<hr>
+<p>列表语法中,以下符合是等效的: * , - , +<br>看个人喜好咯.<br>代码:<br>- 一<br>- 二<br>- 三<br>    -- 二级列表<br>复制代码效果:</p>
+<ul>
+<li><p>一</p>
+</li>
+<li><p>二</p>
+</li>
+<li><p>三</p>
+<ul>
+<li>[二级列表]</li>
+</ul>
+</li>
+</ul>
+<p>有序列表:<br>1. 一<br>2. 二<br>3. 三<br>4. 四<br>   - 可以搭配无序列表</p>
+<p>   - 4.1</p>
+<p>   - 4.2</p>
+<p>复制代码效果:</p>
+<ol>
+<li>一</li>
+<li>二</li>
+<li>三</li>
+<li>四<ul>
+<li>可以搭配无序列表</li>
+<li>4.1</li>
+<li>4.2</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>链接</li>
+</ul>
+<hr>
+<ul>
+<li><strong>Markdown链接有三种格式</strong>:</li>
+</ul>
+<p>行内式：</p>
+<p>   格式为 [link text](URL ‘title text’)。</p>
+<p>代码：</p>
+<p>[百度一下,你就知道](<a href="http://www.baidu.com/" target="_blank" rel="noopener">http://www.baidu.com/</a>)</p>
+<p>复制代码效果：</p>
+<p><a href="http://www.baidu.com/" target="_blank" rel="noopener">百度一下,你就知道</a></p>
+<p>参考式（推荐）：</p>
+<p>参考式链接的写法相当于行内式拆分成两部分，并通过一个识别符来连接两部分。参考式能尽量保持文章结构的简单，也方便统一管理URL。</p>
+<p>个人推荐使用参考式，这样我们可以把URL放在文件开头处，便于修改和管理，参考式相对于行内式有一个明显的优点，就是可以在多个不同的位置引用同一个URL。示例代码如下：</p>
+<p>首先，定义链接(两个都是方括号)：</p>
+<p>第二个方括号内为链接独有的识别符，可以是字母，数字，空白，注意其不区分大小写。</p>
+<p>  [百度][link]</p>
+<p>空白形式:</p>
+<p>  [百度][]</p>
+<p>复制代码效果：</p>
+<p>[百度][<a href="https://www.baidu.com/]" target="_blank" rel="noopener">https://www.baidu.com/]</a></p>
+<p>空白形式：</p>
+<p>[百度][<a href="https://www.baidu.com/]" target="_blank" rel="noopener">https://www.baidu.com/]</a></p>
+<p>定义链接内容：</p>
+<p>其格式为：[识别符]: URL “title”。</p>
+<p>示例代码如下：</p>
+<p>[link]: <a href="http://www.baidu.com/" target="_blank" rel="noopener">http://www.baidu.com/</a> “百度”</p>
+<p>空白形式：</p>
+<p>[百度]: <a href="http://www.baidu.com/" target="_blank" rel="noopener">http://www.baidu.com/</a> “百度”</p>
+<p>复制代码title 可写可不写， 我一般是先把链接定义在文件开头，然后再在文章内引用。</p>
+<hr>
+<ul>
+<li>直接式</li>
+</ul>
+<p>这种形式适合来书写邮箱和引用链接，格式为<URL><br>代码：</p>
+<p><code>&lt;www.baidu.com&gt;</code><br><code>&lt;www.example@email.com&gt;</code></p>
+<p>复制代码效果：</p>
+<p><a href="http://example.com/" target="_blank" rel="noopener">http://example.com/</a></p>
+<p><a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a></p>
+<p><a href="mailto:&#119;&#119;&#119;&#x2e;&#x65;&#x78;&#97;&#109;&#x70;&#x6c;&#101;&#x40;&#x65;&#109;&#97;&#105;&#108;&#x2e;&#99;&#111;&#x6d;">&#119;&#119;&#119;&#x2e;&#x65;&#x78;&#97;&#109;&#x70;&#x6c;&#101;&#x40;&#x65;&#109;&#97;&#105;&#108;&#x2e;&#99;&#111;&#x6d;</a></p>
+<hr>
+<ul>
+<li>图片</li>
+</ul>
+<p>Markdown中引用图片格式如下：</p>
+<p>插入图片的语法和插入超链接的语法基本一致，只是在最前面多一个!。也分为行内式和参考式两种。</p>
+<p>格式为 ![img text](URL “title text”)。一样的，title text内容可写可不写。</p>
+<p>示例代码：</p>
+<p><code>![GitHub](https://user-gold-cdn.xitu.io/2019/2/16/168f4f17755344a8?w=100&amp;h=100&amp;f=jpeg&amp;s=2170 &quot;GitHub,Social Coding&quot;)</code></p>
+<p>行内式：</p>
+<p>复制代码效果：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/2/16/168f4f17755344a8?w=100&h=100&f=jpeg&s=2170" alt="GitHub" title="GitHub,Social Coding"></p>
+<p>参考式（推荐）：</p>
+<p><code>![GitHub][github]
+[github]: https://user-gold-cdn.xitu.io/2019/2/16/168f4f17755344a8?    w=100&amp;h=100&amp;f=jpeg&amp;s=2170 &quot;GitHub,Social Coding&quot;</code></p>
+<p>复制代码效果：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/2/16/168f4f17755344a8?w=100&h=100&f=jpeg&s=2170" alt="GitHub" title="GitHub,Social Coding"></p>
+<hr>
+<ul>
+<li>代码块</li>
+</ul>
+<p>Markdown中代码块格式如下：</p>
+<p>示例：</p>
+<p>```python<br>import os<br>print(“Hello”)<br>```</p>
+<hr>
+<p>三个```要独占一行,``` 后写上所写的语言名，就可以使用相应语言的语法高亮.</p>
+<hr>
+<p>复制代码效果:</p>
+<pre><code class="python">import os
+print(&quot;Hello&quot;)</code></pre>
+<hr>
+<ul>
+<li>表格 </li>
+</ul>
+<p>Markdown中搭建表格非常简单，语法如下：</p>
+<blockquote>
+<p>使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行  </p>
+</blockquote>
+<p>示例代码：</p>
+<pre><code>name | age
+---- | ---
+LearnShare | 12
+Mike |  32</code></pre><p>复制代码更加美观的写法：</p>
+<pre><code>|    name    | age |
+| ---------- | --- |
+| LearnShare |  12 |
+| Mike       |  32 |</code></pre><p>复制代码效果：</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>age</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LearnShare</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Mike</td>
+<td>32</td>
+</tr>
+</tbody></table>
+<p>对齐：</p>
+<p>在表头下方的分隔线标记中加入 :，即可标记下方单元格内容的对齐方式：</p>
+<p>:— 代表左对齐<br>:–: 代表居中对齐<br>—: 代表右对齐</p>
+<p>代码：</p>
+<pre><code>| left | center | right |
+| :--- | :----: | ----: |
+| aaaa | bbbbbb | ccccc |
+| a    | b      | c     |</code></pre><p>复制代码效果：</p>
+<table>
+<thead>
+<tr>
+<th align="left">left</th>
+<th align="center">center</th>
+<th align="right">right</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">aaaa</td>
+<td align="center">bbbbbb</td>
+<td align="right">ccccc</td>
+</tr>
+<tr>
+<td align="left">a</td>
+<td align="center">b</td>
+<td align="right">c</td>
+</tr>
+</tbody></table>
+<hr>
+<ul>
+<li>目录索引</li>
+</ul>
+<p>对一篇长的文章来说，一个带位置定位的目录是很重要的，幸运的是，在Markdown中实现并不难，具体语法与链接相似：<br><a href="#要引用的标题内容">标题</a> 注：标题内容不区分大小写<br>示例：</p>
+<p>## section<br>- [test](#test)</p>
+<p>复制代码如上，就可以定位到test标题的位置了。<br>效果：（简书或者其他一些博客网站貌似不支持页面内目录跳转，这里就不演示了）</p>
+<h2 id="section"><a href="#section" class="headerlink" title="section"></a>section</h2><ul>
+<li><a href="#test">test</a></li>
+</ul>
+<hr>
+<ul>
+<li><strong>扩展</strong></li>
+</ul>
+<p><strong>1.分隔线</strong></p>
+<p>Markdown中,可以在一行中使用三个或更多的 *、- 或 _ 来添加分隔线 要注意与文本之间要有空行:</p>
+<p><code>---</code></p>
+<p>复制代码效果:</p>
+<hr>
+<p><strong>2.删除线</strong></p>
+<p>Markdown使用~<del>来作为删除线，使用方法如下：<br>代码：<br>    这是 \</del>要删除的文本~~<br>复制代码效果：<br>这是 <del>要删除的文本</del></p>
+<h2 id="3-字符转义"><a href="#3-字符转义" class="headerlink" title="3.字符转义"></a><strong>3.字符转义</strong></h2><blockquote>
+<p>反斜线（\）用于插入在 Markdown 语法中有特殊作用的字符。</p>
+</blockquote>
+<p>例如:<br><code>这是用来 *演示* 的 _文本_</code><br><code>这是用来 \*演示\* 的 \_文本\_</code><br>复制代码效果：</p>
+<p>这是用来 <em>演示</em> 的 <em>文本</em><br>这是用来 *演示* 的 _文本_</p>
+<hr>
+<p><strong><em>写在最后</em></strong></p>
+<p>以上，就是Markdown的基本语法了.</p>
+
+  </article>
+  
+    
+<div class="nexmoe-post-copyright">
+<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+<strong>本文作者：</strong>柒<br>
+<strong>本文链接：</strong><a href="https://s-04.github.io/posts/37649.html" title="https:&#x2F;&#x2F;s-04.github.io&#x2F;posts&#x2F;37649.html" target="_blank" rel="noopener">https:&#x2F;&#x2F;s-04.github.io&#x2F;posts&#x2F;37649.html</a><br>
+
+  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+</div>
+
+
+  
+  <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '9345a34df46c36c1c647',
+        clientSecret: 'c48859b3a20e7a78d28d54eefb676fcf8e81af00',
+        id: window.location.pathname,
+        repo: 'S-04.github.io',
+        owner: 'S-04',
+        admin: 'S-04'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+ 
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-for-websites@1.4.9/SmoothScroll.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="/js/app.js?v=1654978716895"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+
+
+
+  
+
+
+
+
+
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  <!-- 雪花特效2 -->
+  
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/T_33.model.json"},"display":{"position":"right","width":300,"height":700},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>
